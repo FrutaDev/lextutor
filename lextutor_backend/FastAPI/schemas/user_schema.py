@@ -1,0 +1,9 @@
+from pydantic import BaseModel, EmailStr
+
+class User(BaseModel): 
+    name: str
+    email: EmailStr
+    role: str
+    password: str
+    advisor: bool
+ 
