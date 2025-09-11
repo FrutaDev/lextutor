@@ -6,6 +6,7 @@ module.exports = {
     "./app/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
+    darkMode: 'media',
     extend: {},
   },
   plugins: [],

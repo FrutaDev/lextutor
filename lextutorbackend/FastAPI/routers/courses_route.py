@@ -22,12 +22,12 @@ async def get_courses():
 
 
 @router.post('/course')
-async def get_courses(course: Course):
+async def create_course(course: Course):
     try:
         new_course = course.model_dump()
         if not new_course:
             raise HTTPException(status_code=400, detail="course not inserted")
-        result = db.courses.insert_one(new_course)
+        result = await db.courses.insert_one(new_course)
         new_course["_id"] = str(result.inserted_id)
         return new_course
     except Exception as e:
@@ -37,7 +37,7 @@ async def get_courses(course: Course):
 @router.get('/course/{course_id}')
 async def get_course(course_id: str):
     try:
-        course = db.courses.find_one({"_id": ObjectId(course_id)})
+        course = await db.courses.find_one({"_id": ObjectId(course_id)})
         if not course:
             raise HTTPException(status_code=400, detail="user not inserted")
         serialize_doc(course)
@@ -46,7 +46,7 @@ async def get_course(course_id: str):
         raise HTTPException(status_code=500, detail=f"Internal error: {str(e)}")
 
     
-@router.put('/user/{course_id}')
+@router.put('/course/{course_id}')
 async def update_course(course_id: str, course: Course):
     try:
         updated_course = course.model_dump(exclude_unset=True)

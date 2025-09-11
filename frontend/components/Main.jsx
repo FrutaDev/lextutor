@@ -1,14 +1,12 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, useColorScheme } from "react-native";
 import AvailableCourses from "./AvailableCourses";
-import user from '../assets/user.png'
 import Profile from "./Profile";
-
 
 export default function Main () {
     return (
-        <View className="flex-1 bg-black">
-            <Profile/>
-            <AvailableCourses/>
-        </View>
+            <View className="flex-1 bg-gray-300">
+                <Profile/>
+                <AvailableCourses/>
+            </View>
     )
 }

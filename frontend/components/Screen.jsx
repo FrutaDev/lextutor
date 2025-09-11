@@ -1,7 +1,7 @@
 import { View } from "react-native";
 
-export default function Screen ({children}) {
+export default function Screen ({children, backgroundColor = "bg-black"}) {
     return (
-        <View className="flex-1 bg-black pl-2 pr-2">{children}</View>
+        <View className={`flex-1 ${backgroundColor} pl-2 pr-2`}>{children}</View>
     )
 }

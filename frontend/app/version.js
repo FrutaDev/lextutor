@@ -11,12 +11,14 @@ export default function About () {
                 headerStyle: {backgroundColor: "#4C0D1E"},
                 headerLeft: () => {},
                 headerTitle: () => (
-                    <Text className="text-white font-bold text-xl">About Us</Text>
+                    <Text className="text-white font-bold text-xl">Version</Text>
                 )
               }}
         />
-            <View className="p-2">
-                    <AboutComponent/>
+            <View className="flex-1 bg-gray-300 p-4">
+                    <Text className="text-black">Version 0.3.2</Text>
+                    <Text className="text-black">Developed by Erick Romero</Text>
+                    <Text className="text-black">Contact: erickgromero.19@gmail.com</Text>
             </View>
         </Screen>
     )

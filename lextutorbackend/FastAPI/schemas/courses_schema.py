@@ -4,5 +4,6 @@ class Course(BaseModel):
     name: str
     code: str
     category: str
-    tutors: list
+    advisors: list
     days: list
+    time: str

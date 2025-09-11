@@ -14,13 +14,15 @@ export default function Layout () {
             <View className="flex-1">
                 <Stack 
                 screenOptions={{
-                    headerStyle: {backgroundColor: "#45254D"},
+                    contentStyle: { backgroundColor: '#f3f4f6' },
+                    headerStyle: {backgroundColor: "#4C0D1E"},
                     headerTintColor: "white",
                     headerTitle: "",
-                    headerLeft: () => <Logo/>,
+                    headerLeft: () => <Logo
+                    />,
                     headerRight: () => (
                         <Link asChild className=" pl-2 text-blue-400" href="/about">
-                            <StyledPressable className={`active:opacity-50`}>
+                            <StyledPressable className={`active:opacity-50 -ml-4`}>
                                 <CircleIconInfo/>
                             </StyledPressable>
                         </Link>
