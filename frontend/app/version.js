@@ -11,14 +11,15 @@ export default function About () {
                 headerStyle: {backgroundColor: "#4C0D1E"},
                 headerLeft: () => {},
                 headerTitle: () => (
-                    <Text className="text-white font-bold text-xl">Version</Text>
-                )
+                    <Text className="text-white font-bold text-xl">Versión</Text>
+                ),
+                title: "Versión",
               }}
         />
-            <View className="flex-1 bg-gray-300 p-4">
-                    <Text className="text-black">Version 0.3.2</Text>
-                    <Text className="text-black">Developed by Erick Romero</Text>
-                    <Text className="text-black">Contact: erickgromero.19@gmail.com</Text>
+            <View className="flex-1 bg-gray-300 pt-4 pl-2">
+                    <Text className="text-black">Versión 0.3.2</Text>
+                    <Text className="text-black">Desarrollado por Erick Gomez</Text>
+                    <Text className="text-black">Contacto: erickgromero.19@gmail.com</Text>
             </View>
         </Screen>
     )

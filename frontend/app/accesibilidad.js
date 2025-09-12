@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, Button, Switch, Pressable } from 'react-native';
+import { View, Text, Button, Switch, Pressable, ScrollView } from 'react-native';
 import { Stack } from 'expo-router';
 
 
@@ -9,10 +9,11 @@ export default function ThemeToggle() {
     <>
     <Stack.Screen options={
             {title:"Accesibilidad",
-                headerLeft: () => {}
+                headerLeft: () => {},
+                headerRight: () => {},
             }}
             />
-        <View className="p-4 bg-gray-300 flex-1">
+        <ScrollView className="p-4 bg-gray-300 flex-1">
             <View>
                 <Text className="text-lg font-bold">
                     Cambiar Tema    
@@ -24,7 +25,7 @@ export default function ThemeToggle() {
                     </Text>
                     <Switch/>
                 </Pressable>
-        </View>
+        </ScrollView>
     </>
   );
 }

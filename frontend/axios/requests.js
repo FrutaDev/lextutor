@@ -29,3 +29,12 @@ export const fetchOne = async (endpoint, id, options = {}) => {
         throw error;
     }  
 };
+export const fetchMany = async (endpoint, id, options = {}) => {
+    try {
+        const response = await API.get(`/${endpoint}/${id}`, options);
+        return response.data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }  
+};

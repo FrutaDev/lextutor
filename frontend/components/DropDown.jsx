@@ -1,9 +1,9 @@
 import DropDownPicker from "react-native-dropdown-picker";
 import { View } from "react-native";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 
-export default function DropDown ({styles}) {
+export default function DropDown ({styles, onFilter}) {
     
     const [open, setOpen] = React.useState(false);  
     const [value, setValue] = React.useState(null);
@@ -14,6 +14,7 @@ export default function DropDown ({styles}) {
         {label: 'Gubernamental', value: 'Gubernamental'},
         {label: 'Internacionales', value: 'Internacionales'},
     ]);
+
 
     return (
         <View className={styles}>
@@ -26,7 +27,7 @@ export default function DropDown ({styles}) {
                 setItems={setItems}
                 placeholder="Filtrar"
                 containerStyle={{width: 150}}
-                onChangeValue={(value) => console.log(value)}
+                onChangeValue={onFilter}
             />
         </View>
     )

@@ -50,7 +50,7 @@ export default function AvailableCourses () {
                             <Link
                             asChild href={`/${course._id}`}>
                             <StyledPressable className="flex mb-3 active:opacity-50 bg-gray-100 rounded-xl shadow-xl">
-                                    <View className="flex justify-center border rounded-xl border-black/50 pl-3 pr-2 pt-4 pb-3">
+                                    <View className="flex justify-center rounded-xl border-black/50 pl-3 pr-2 pt-4 pb-3">
                                         <View className="flex-row justify-between">
                                             <Text className="text-black font-bold">
                                             {course.name}
