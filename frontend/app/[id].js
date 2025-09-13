@@ -89,13 +89,13 @@ export default function Detail() {
             />
                 <Screen backgroundColor="bg-gray-300">
                         {showCalendar && (
-                            <View className="flex-1 bg-gray-300 w-full h-half">
+                            <ScrollView className="flex-1 bg-gray-300 w-full h-half">
                                 <Calendar/>
                                 <View className="flex-arrow justify-between items-center p-4">
                                     <Button title="Agendar Asesoria"/>
                                     <Button title="Cerrar Calendario" onPress={() => toggleCalendar()} />
                                 </View>
-                            </View>
+                            </ScrollView>
                         )}
                         {!showCalendar && (
                     <ScrollView>

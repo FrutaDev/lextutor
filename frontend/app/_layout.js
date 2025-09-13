@@ -9,7 +9,6 @@ import Profile from "../components/Profile"
 
 export default function Layout () {
     const insets = useSafeAreaInsets()
-    const StyledPressable = styled(Pressable)
     return (
             <View className="flex-1">
                 <Stack 
@@ -18,15 +17,10 @@ export default function Layout () {
                     headerStyle: {backgroundColor: "#4C0D1E"},
                     headerTintColor: "white",
                     headerTitle: "",
-                    headerLeft: () => <Logo
-                    />,
-                    headerRight: () => (
-                        <Link asChild className=" pl-2 text-blue-400" href="/about">
-                            <StyledPressable className={`active:opacity-50 -ml-4`}>
-                                <CircleIconInfo/>
-                            </StyledPressable>
-                        </Link>
-                    )
+                    headerLeft: () => (
+                        <Logo/>
+                    ),
+                    headerRight: () => {}
                 }}/>
             </View>
     )

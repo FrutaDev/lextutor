@@ -22,8 +22,10 @@ export default function Configuration () {
                     <ConfigurationComponent label="Accesibilidad" to="accesibilidad"/>
                     <ConfigurationComponent label="Cuenta" to="cuenta"/>
                     <ConfigurationComponent label="Versión" to="version"/>
-                    <ConfigurationComponent label="Ayuda"/>
-                    <ConfigurationComponent label="Cerrar Sesión"/>
+                    <ConfigurationComponent label="Ayuda" to="ayuda"/>
+                    <ConfigurationComponent label="Cerrar Sesión"
+                    
+                    />
                 </View>
             </ScrollView>
         </>
