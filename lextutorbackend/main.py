@@ -2,6 +2,7 @@ from FastAPI.routers import courses_route
 from FastAPI.routers import users_route
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+import uvicorn
 
 app = FastAPI()
 
@@ -22,3 +23,6 @@ async def main_test():
 
 app.include_router(courses_route.router)
 app.include_router(users_route.router)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

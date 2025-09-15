@@ -1,6 +1,5 @@
 from jose import JWTError, jwt
 from jwt.exceptions import InvalidTokenError
-from typing import Annotated
 from pydantic import BaseModel
 from datetime import timedelta, datetime, timezone
 import os

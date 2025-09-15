@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from bson import ObjectId
 from database.databaseconnection import db
 from FastAPI.schemas.courses_schema import Course
-from FastAPI.serialize_doc import serialize_doc
+from utils.serialize_doc import serialize_doc
 
  
 router = APIRouter()

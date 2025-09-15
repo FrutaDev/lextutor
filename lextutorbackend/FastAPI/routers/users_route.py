@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from FastAPI.schemas.user_schema import User
 from FastAPI.schemas.login_schema import Login
 from database.databaseconnection import db
-from FastAPI.serialize_doc import serialize_doc
+from utils.serialize_doc import serialize_doc
 from bson import ObjectId
 from utils.hashing import hash_password, verify_password
 from utils.tokens import create_access_token
