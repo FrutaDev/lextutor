@@ -24,29 +24,11 @@ export default function Main () {
 
     return (
         <>
-                {!isAuthenticated && (
-                    <>
-                        <Login
-                            onPress={authenticated}
-                        />
-                    </>
-                )}
-                {isAuthenticated && (
-                    <>
-                        <Stack.Screen
-                        options={{
-                            headerStyle: {backgroundColor: "#4C0D1E"},
-                            headerLeft: () => {},
-                            headerRight: () => {}
-                        }}
-                        />
-                        <View>
-                            <Profile/>
-                            <AvailableCourses/>
-                        </View>
-                    </>
-                )
-            }
+            <View>
+                <Profile/>
+                <AvailableCourses/>
+            </View>
+
         </>
     )
 }

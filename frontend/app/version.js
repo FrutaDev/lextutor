@@ -19,9 +19,9 @@ export default function About () {
                     <Text className="text-white font-bold text-xl">Versión</Text>
                 ),
                 headerRight: () => (
-                        <Link asChild className=" pl-2 text-blue-400" href="/about">
-                            <StyledPressable className={`active:opacity-50 -ml-4`}>
-                                <CircleIconInfo/>
+                        <Link asChild className="flex  pl-2 text-blue-400" href="/about">
+                            <StyledPressable className="active:opacity-50 -ml-4 justify-center items-center">
+                                <CircleIconInfo className="flex justify-center items-center"/>
                             </StyledPressable>
                         </Link>
                 ),

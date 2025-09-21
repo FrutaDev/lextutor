@@ -1,4 +1,4 @@
-import { FlatList, Pressable, ScrollView, Text, View, Image, ActivityIndicator, useColorScheme } from "react-native"
+import { FlatList, Pressable, Text, View, Image, ActivityIndicator, useColorScheme } from "react-native"
 import { StatusBar } from "expo-status-bar"
 import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { Link } from "expo-router"
@@ -9,22 +9,22 @@ import DropDown from "./DropDown.jsx"
 
 
 
-export default function AvailableCourses () {
+export default function AvailableAdvisors () {
     
 
 
     const insets = useSafeAreaInsets()
     const StyledPressable = styled(Pressable)
 
-    const [courses, setCourses] = useState([])
+    const [advisors, setAdvisors] = useState([])
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
 
 
     useEffect(() => {
-        const fetchCourses = fetchData('courses')
+        const fetchAdvisors = fetchData('users')
         .then(data => {
-            setCourses(data)
+            setAdvisors(data)
             setLoading(false)
         })
         .catch(err => {
@@ -38,30 +38,26 @@ export default function AvailableCourses () {
     return (
                 <View >
                     <StatusBar style="light"/>
-                        <DropDown 
+                        {/* <DropDown 
                         styles={"flex items-end pr-3 mb-2]"}
-                        />
+                        /> */}
                         {loading && <ActivityIndicator className="flex justify-center items-center" size="large" color="white" />}
                         <FlatList className=""
-                                data={courses}
-                                keyExtractor={(course) => course._id}
+                                data={advisors}
+                                keyExtractor={(advisor) => advisor._id}
                                 contentContainerStyle={{ paddingHorizontal: 20, paddingVertical: 10, paddingBottom: 170 }}
-                                renderItem={({ item: course }) => (
+                                renderItem={({ item: advisor }) => (
                             <Link
-                            asChild href={`/${course._id}`}>
-                            <StyledPressable className="flex mb-3 active:opacity-50 bg-gray-100 rounded-xl shadow-xl">
-                                    <View className="flex justify-center rounded-xl border-black/50 pl-3 pr-2 pt-4 pb-3">
+                            asChild href={``}>
+                            <StyledPressable className="flex mb-3 active:opacity-50 bg-gray-100 w-dvw rounded-xl shadow-xl">
+                                    <View className="flex rounded-xl border-black/50 pl-3 pr-2 pt-4 pb-3">
                                         <View className="flex-row justify-between">
                                             <Text className="text-black font-bold">
-                                            {course.name}
+                                            {advisor.name}
                                         </Text>
-                                            <Text className="text-black/60">{Array.isArray(course.days) ? course.days.join(' - ') : course.days}</Text>
-                                        </View>
-                                        <View className="flex-row justify-between pt-1">
-                                            <Text className="text-black/50">
-                                                {Array.isArray(course.advisors) ? course.advisors.join(' - ') : course.advisors}
-                                            </Text>
-                                            <Text className="text-black/30">{course.time}</Text>
+                                        <Text>
+                                            ⭐⭐⭐⭐⭐
+                                        </Text>
                                         </View>
                                     </View>
                                 </StyledPressable>

@@ -1,7 +1,8 @@
 import axios from 'axios';
+import * as dotenv from 'dotenv'
+dotenv.config()
 
-// Reemplaza con la IP local de tu PC
-const url = `192.168.1.64:8000`
+const url = process.env.URL
 
 const API = axios.create({
     baseURL: `http://${url}`
