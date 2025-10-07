@@ -7,9 +7,8 @@ const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
 
-const AppTabs = () => {
+export default function AppTabs () {
     return (
-        <Tab.Navigator>
             <Tabs
             screenOptions={{
                 title:"Back",
@@ -39,13 +38,11 @@ const AppTabs = () => {
                 }}
                 />
             </Tabs>
-        </Tab.Navigator>
     )
 }
 
-export default function TabsLayout() {
-
-    return (
-                    <Stack.Screen name="AppTabs" component={AppTabs}/>
-    )
-}
+// export default function TabsLayout() {
+//     return (
+//                     <Tabs.Screen name="AppTabs" component={AppTabs}/>
+//     )
+// }

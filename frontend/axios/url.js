@@ -1,11 +1,10 @@
 import axios from 'axios';
-import * as dotenv from 'dotenv'
-dotenv.config()
+import urlString from './urlString';
 
-const url = process.env.URL
+const url = urlString
 
 const API = axios.create({
-    baseURL: `http://${url}`
+    baseURL: url
 });
 
 export default API;

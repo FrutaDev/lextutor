@@ -25,7 +25,7 @@ export const AuthProvider = ( {children}: any ) => {
         authenticated: boolean | null
     }>({
         token: null,
-        authenticated: null
+        authenticated: false
     })
 
     useEffect(() => {

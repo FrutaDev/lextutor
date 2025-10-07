@@ -3,7 +3,7 @@ import TextInputLayout from "./TextInputLayout";
 import { useAuth } from "../app/context/AuthContext";
 
 export default function Login() {
-    const {onLogin} = useAuth
+    const {onLogin} = useAuth()
     return (
         <View className="flex-1 items-center justify-center  bg-gray-300 p-4">
             <Text>Login</Text>

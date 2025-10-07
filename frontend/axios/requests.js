@@ -18,7 +18,7 @@ export const postData = async (endpoint, data, options = {}) => {
         console.error("Error posting data:", error);
         throw error;
     }
-};
+}
 
 export const fetchOne = async (endpoint, id, options = {}) => {
     try {
@@ -28,7 +28,8 @@ export const fetchOne = async (endpoint, id, options = {}) => {
         console.error("Error fetching data:", error);
         throw error;
     }  
-};
+}
+
 export const fetchMany = async (endpoint, id, options = {}) => {
     try {
         const response = await API.get(`/${endpoint}/${id}`, options);
@@ -37,4 +38,4 @@ export const fetchMany = async (endpoint, id, options = {}) => {
         console.error("Error fetching data:", error);
         throw error;
     }  
-};
+}

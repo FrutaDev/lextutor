@@ -1,19 +1,19 @@
 import Main from "../../components/Main"
-import { AuthProvider, useAuth } from "../context/AuthContext"
+import { AuthProvider} from "../context/AuthContext"
+import useAuth from '../context/AuthContext'
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import Login from "../../components/Login"
 import { NavigationContainer } from "@react-navigation/native"
-import TabsLayout from "./_layout"
+import AppTabs from "./_layout"
+import { Text, View } from "react-native"
 
 const Stack = createNativeStackNavigator()
 
 export default function Index () {
     return (
         <AuthProvider>
-            <NavigationContainer>
                 <Main/>
-                <TabsLayout/>
-            </NavigationContainer>
+                <AppTabs/> 
         </AuthProvider>
     )
 }
@@ -21,7 +21,6 @@ export default function Index () {
 export const Layout = () => {
     const {authState, onLogout} = useAuth()
     console.log(authState.authenticated)
-    
     return (
             <Stack.Navigator>
                 {authState?.authenticated ?

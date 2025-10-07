@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context"
 import { Link } from "expo-router"
 import { styled } from "nativewind"
 import { useEffect, useState } from "react"
-import { fetchData, fetchOne} from '../axios/requests.js'
+import { fetchData } from '../axios/requests.js'
 import DropDown from "./DropDown.jsx"
 
 
