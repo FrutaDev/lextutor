@@ -24,7 +24,6 @@ export default function Configuration () {
                     <ConfigurationComponent label="Versión" to="version"/>
                     <ConfigurationComponent label="Ayuda" to="ayuda"/>
                     <ConfigurationComponent label="Cerrar Sesión"
-                    
                     />
                 </View>
             </ScrollView>

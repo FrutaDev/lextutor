@@ -1,5 +1,6 @@
 import { Stack } from "expo-router";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
+import Help from "../components/Help";
 
 
 export default function Ayuda () {
@@ -16,9 +17,9 @@ export default function Ayuda () {
                 title: "Versión",
                 }}
             />
-            <View className="flex-1 justify-center items-center">
-                <Text>Ayuda</Text>
-            </View>
+            <ScrollView className="flex-1 w-48 mr-6 ml-24">
+                    <Help className="flex items-center"/>
+            </ScrollView>
         </>
     )
 }

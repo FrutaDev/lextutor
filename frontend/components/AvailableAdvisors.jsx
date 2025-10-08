@@ -42,16 +42,16 @@ export default function AvailableAdvisors () {
                         styles={"flex items-end pr-3 mb-2]"}
                         /> */}
                         {loading && <ActivityIndicator className="flex justify-center items-center" size="large" color="white" />}
-                        <FlatList className=""
+                        <FlatList className="flex"
                                 data={advisors}
                                 keyExtractor={(advisor) => advisor._id}
                                 contentContainerStyle={{ paddingHorizontal: 20, paddingVertical: 10, paddingBottom: 170 }}
                                 renderItem={({ item: advisor }) => (
                             <Link
                             asChild href={``}>
-                            <StyledPressable className="flex mb-3 active:opacity-50 bg-gray-100 w-dvw rounded-xl shadow-xl">
-                                    <View className="flex rounded-xl border-black/50 pl-3 pr-2 pt-4 pb-3">
-                                        <View className="flex-row justify-between">
+                            <StyledPressable className="flex-1 mb-3 active:opacity-50 bg-gray-100 rounded-xl shadow-xl">
+                                    <View className="rounded-xl border-black/50 pl-3 pr-2 pt-4 pb-3">
+                                        <View className="flex-row pt-4 pb-4 w-full justify-between">
                                             <Text className="text-black font-bold">
                                             {advisor.name}
                                         </Text>
